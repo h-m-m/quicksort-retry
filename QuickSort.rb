@@ -4,7 +4,7 @@ module QuickSort
     sort_iterate!(list)
   end
 
-  def self.sort_iterate!(list, low = 0, high = list.length - 1, accumulator = [], partition_index = 0)
+  def self.sort_iterate!(list, low = 0, high = list.length - 1, accumulator = [])
     if low < high then
       partition_index = partition!(list, low, high)
       accumulator.push([list, partition_index + 1, high])
